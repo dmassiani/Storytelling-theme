@@ -1,0 +1,27 @@
+.story{
+	padding: 8em 0;
+	text-align: center;
+	h1{
+		text-align: center;
+		font-weight: 300;
+		font-size: 4em;
+		text-transform: lowercase;
+		margin-bottom: 1em;
+	}
+	p,.download-begin{
+		@include span-columns(10);
+		@include shift(1);
+		text-align: center;
+	    @include media($medium-screen) {
+			@include span-columns(8);
+			@include shift(2);
+	    }
+	    @include media($max-width) {
+			@include span-columns(2);
+			@include shift(5);
+	    }
+	}
+	.button{
+		margin-top: 4em;
+	}
+}

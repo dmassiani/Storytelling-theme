@@ -1,0 +1,84 @@
+.hero {
+  $hero-background-bottom: #2A2B34; 
+  $hero-background-top: #000;//#3CC4FF, #C828FF
+  $hero-color: white;
+  $gradient-angle: 40deg;
+  $hero-image: '/wp-content/themes/loots/assets/images/moine.png';
+
+  @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  // background: #222225;
+  // padding-bottom: 4em;
+
+
+  .hero-logo img {
+    height: 7em;
+    margin-bottom: 2.5em;
+  }
+
+  .hero-inner {
+    @include outer-container;
+    @include clearfix;
+    padding: 2em;
+    padding-top: 6em;
+
+    @include media($medium-screen) {
+      padding: 4em;
+      padding-top: 10em;
+    }
+    @include media($max-width) {
+      padding: 0;
+      padding-top: 12em;
+      padding-bottom: 0;
+    }
+
+    margin: auto;
+    color: $hero-color;
+    .hero-animation{
+        line-height: 0;
+        padding-top: 6em;
+        // @include span-columns(12);
+        display: none;
+        @include media($max-width) {
+          @include span-columns(7);
+        }
+    }
+    .hero-copy {
+
+        // @include span-columns(12);
+        @include media($max-width) {
+          @include span-columns(5);
+        }
+
+      
+      h1 {
+        font-size: 1.6em;
+        margin-bottom: .1em;
+        line-height: 1;
+        text-transform: uppercase;
+        font-weight: 700;
+        @include media($large-screen) {
+          font-size: 3.6em;
+        }
+      }
+
+      p {
+        font-family: $serif;
+        margin: auto;
+        font-weight: 300;
+        line-height: 1.4em;
+
+        @include media($large-screen) {
+          font-size: 1.1em;
+        }
+      }
+
+      .button{
+        margin-top: 3em;
+      }
+    }
+  }
+}

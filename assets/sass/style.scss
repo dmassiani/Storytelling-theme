@@ -1,0 +1,157 @@
+/*
+Theme Name: Loots
+Theme URI: https://github.com/dmassiani/loots
+Author: David Massiani
+Author URI: http://www.davidmassiani.com
+Description: A simple yet advanced Starter Theme built using _S, Bourbon and Neat (http://underscores.me, http://bourbon.io, http://neat.bourbon.io). Please refer to the README.md file for basic usage instructions and prerequisites. You can always grab the latest version over at http://github.com/digisavvy.some-like-it-neat
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Text Domain: digistarter
+Domain Path: /library/languages/
+Tags: white, light, one-column, two-columns, right-sidebar, responsive-layout, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, translation-ready, accessibility-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Loots is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/*--------------------------------------------------------------
+1.0 Bourbon, Bitters, Neat
+--------------------------------------------------------------*/
+@import "bourbon/bourbon";
+@import "settings/typography";
+$visual-grid: false;
+$visual-grid-color: red;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.2;
+@import "base/base"; // Bitters
+@import "neat/neat";
+
+
+// colors
+$story-text: #646E79;
+
+// layout
+$story-gutter: 4em;
+
+// composants custom
+@import "components/header";
+@import "components/footer";
+@import "components/buttons";
+@import "components/vertical-tabs";
+@import "components/prism";
+@import "components/blog";
+@import "components/docs";
+@import "components/code";
+@import "components/admin";
+@import "components/story";
+
+// Sections
+@import "sections/heros";
+@import "sections/baseline";
+@import "sections/illustration";
+@import "sections/triple";
+
+
+h1,h2,h3,h4,h5,h6{
+	font-weight: 300;
+}
+h2{
+	margin-bottom: .3em;
+}
+body{
+	background: #fff;
+	color: $story-text;
+	margin: 0;
+}
+.inner{
+	@include outer-container;
+}
+
+::selection {
+  background: #1BC5E4; /* WebKit/Blink Browsers */
+  color: white;
+}
+::-moz-selection {
+  background: #1BC5E4; /* Gecko Browsers */
+  color: white;
+}
+
+.plugins{
+	background: #333;
+	color: white;
+	display: none;
+	.inner{
+		padding: 5em 3em;
+	}
+}
+
+.instructions{
+	.inner{
+			padding: .4em;
+	    @include media($medium-screen) {
+			padding: 3em;
+	    }
+	    @include media($max-width) {
+			padding: 4em;
+	    }	
+	}
+}
+
+#page{
+	display: inline-block;
+	width: 300px;
+	height: 530px;
+	margin-left: -60px;
+}
+
+.imac{
+	display: inline-block;
+	position: relative;
+}
+#imac{
+	width: 500px;
+	height: 306px;
+	display: block;
+}
+#imacbottom{
+	width: 500px;
+	height: 106px;
+	display: block;
+}
+
+#browser{
+	width: 400px;
+	height: 250px;
+	position: absolute;
+	top: 40px;
+	left: 45px;
+}
+
+.unlimited{
+	background: #1BC5E4;
+	color: white;
+	text-align: center;
+	padding: 6em 0;
+}
+
+.blog{
+	h1,h2,h3,h4,h5,h6{
+		margin-bottom: .8em;
+	}
+	h2,h3,h4,h5,h6{
+		margin-top: .6em;
+	}
+}
+
+form.mc4wp-form{
+	@include span-columns(6);
+	@include shift(3);
+}

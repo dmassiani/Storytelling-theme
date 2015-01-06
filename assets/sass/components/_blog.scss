@@ -1,0 +1,45 @@
+// single
+article.post{
+	header{
+
+		time,
+		p.author{
+			display: inline-block;
+		}
+
+	}
+}
+
+.blog main{
+	padding-top: 100px;
+}
+.blog .inner{
+	padding: 0 1em;
+    @include media($medium-screen) {
+		padding: 0 8em;
+    }
+    @include media($max-width) {
+		padding: 0 16em;
+    }	
+}
+
+.single{
+	.inner{
+		padding: 0 1em;
+	    @include media($medium-screen) {
+			padding: 0 8em;
+	    }
+	    @include media($max-width) {
+			padding: 0 16em;
+	    }
+	}
+	main{
+		font-size: 1.4em;
+		font-weight: 300;
+		line-height: 1.3em;
+		padding-top: 80px;
+	}
+	header h1{
+		margin: 2em 0;
+	}
+}
