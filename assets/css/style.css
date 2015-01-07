@@ -1457,9 +1457,9 @@ article.post header p.author {
 }
 
 .hero {
-  background: url("/wp-content/themes/loots/assets/images/moine.png"), -webkit-linear-gradient(40deg, #2A2B34, #000), no-repeat #000 scroll;
-  background: url("/wp-content/themes/loots/assets/images/moine.png"), -webkit-linear-gradient(50deg, #2A2B34, #000), no-repeat #000 scroll;
-  background: url("/wp-content/themes/loots/assets/images/moine.png"), linear-gradient(40deg, #2A2B34, #000), no-repeat #000 scroll;
+  background: url("/wp-content/themes/storytelling/assets/images/moine.png"), -webkit-linear-gradient(40deg, #2A2B34, #000), no-repeat #000 scroll;
+  background: url("/wp-content/themes/storytelling/assets/images/moine.png"), -webkit-linear-gradient(50deg, #2A2B34, #000), no-repeat #000 scroll;
+  background: url("/wp-content/themes/storytelling/assets/images/moine.png"), linear-gradient(40deg, #2A2B34, #000), no-repeat #000 scroll;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

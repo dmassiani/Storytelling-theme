@@ -1,7 +1,33 @@
+<?php
+if (function_exists('icl_get_languages')) {
+  if( ICL_LANGUAGE_CODE === 'en' ){
+      $menu_language = '?lang=en';
+  }else{
+    $menu_language = '';
+  }
+
+}
+function get_url_for_language( $original_url, $language )
+{
+    $post_id = url_to_postid( $original_url );
+    $lang_post_id = icl_object_id( $post_id , 'page', true, $language );
+     
+    $url = "";
+    if($lang_post_id != 0) {
+        $url = get_permalink( $lang_post_id );
+    }else {
+        // No page found, it's most likely the homepage
+        global $sitepress;
+        $url = $sitepress->language_url( $language );
+    }
+     
+    return $url;
+}
+?>
     <header class="navigation">
       <div class="navigation-wrapper">
-        <a href="/" class="hero-logo">
-          <img src="/wp-content/themes/loots/assets/images/storytelling.svg" alt="Logo Image"/>
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="hero-logo">
+          <img src="/wp-content/themes/storytelling/assets/images/storytelling.svg" alt="Logo Image"/>
         </a>
         <a id="js-mobile-menu" href="" class="navigation-menu-button">
           MENU
@@ -9,7 +35,7 @@
         <div class="nav">
           <ul id="navigation-menu">
             <li class="nav-link">
-              <a href="/blog/">
+              <a href="<?php echo get_url_for_language('/blog/', ICL_LANGUAGE_CODE) ?>">
                 Blog
               </a>
             </li>
@@ -19,7 +45,7 @@
               </a>
             </li>
             <li class="nav-link">
-              <a href="/docs/">
+              <a href="<?php echo get_url_for_language('/blog/', ICL_LANGUAGE_CODE) ?>">
                 Docs
               </a>
             </li>

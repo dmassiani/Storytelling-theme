@@ -249,12 +249,12 @@ function Storytelling(){
 
 
 				this.id = id;
-				this.settings = { src:"wp-content/themes/loots/assets/images/renard.jpg", x: 0, y: 0, width: 0, height:200 };
+				this.settings = { src:"wp-content/themes/storytelling/assets/images/renard.jpg", x: 0, y: 0, width: 0, height:200 };
 
 				var contentText = t.svg.image( this.settings );
 
 				contentText.attr({ id: id });
-				contentText.attr('xlink:href' , 'wp-content/themes/loots/assets/images/renard.jpg' );
+				contentText.attr('xlink:href' , 'wp-content/themes/storytelling/assets/images/renard.jpg' );
 
 				this.attr = function( attribut ){
 					jQuery( '#' + this.id ).attr( attribut );

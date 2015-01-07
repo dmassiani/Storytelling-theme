@@ -46,7 +46,7 @@ gulp.task('browser-sync', function() {
 	];
 
 	browserSync.init(files, {
-	    proxy: "portfolio2015.local"
+	    proxy: "storytelling.local"
 	});
 
 });

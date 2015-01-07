@@ -3,7 +3,7 @@
   $hero-background-top: #000;//#3CC4FF, #C828FF
   $hero-color: white;
   $gradient-angle: 40deg;
-  $hero-image: '/wp-content/themes/loots/assets/images/moine.png';
+  $hero-image: '/wp-content/themes/storytelling/assets/images/moine.png';
 
   @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
 

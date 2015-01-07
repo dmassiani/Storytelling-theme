@@ -14,7 +14,7 @@ Description: Section with 2 titles, 2 contents and 2 illustrations
 	<div class="hero-inner">
 		<div class="hero-copy">
 			<a href="" class="hero-logo">
-				<img src="/wp-content/themes/loots/assets/images/storytelling.svg" alt="Storytelling"/>
+				<img src="/wp-content/themes/storytelling/assets/images/storytelling.svg" alt="Storytelling"/>
 			</a>
 			<h1><?php the_chapter_title( 'title' ) ?></h1>
 			<?php the_chapter('intro'); ?>

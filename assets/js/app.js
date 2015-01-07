@@ -1,5 +1,5 @@
 require.config({
-	baseUrl: '/wp-content/themes/loots/assets/components',
+	baseUrl: '/wp-content/themes/storytelling/assets/components',
 	paths: {
 		enquire: 'enquire/dist/enquire.min',
 		snap: 'Snap.svg/dist/snap.svg-min',	
